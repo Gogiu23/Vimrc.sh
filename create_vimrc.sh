@@ -85,14 +85,14 @@ vnoremap <S-k> :m "'"<-2<CR>gv=gv' > ~/.vim/settings.vim
 
 echo -e 'Progress\n'
 
-for ((percent=0; percent<=1000; percent++)); do
+for ((percent=0; percent<=100; percent++)); do
 	sleep 0.01
 
 # Borra el prograso anterior y muestra el nuevo
 	echo -ne "\r$percent% "
 
 #Aggiunge una barra di progresso
-	for ((i=0; i<percent/10; i++)); do
+	for ((i=0; i<percent/100; i++)); do
 		echo -n '🟩'
 	done
 done
@@ -101,27 +101,32 @@ echo -e "\n"
 echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 echo "The .vimrc and the settings are correctly created. Well done!!"
 echo 'Waiting for the end of the evaluation. Write "FINISH" to close the program'
-read respuesta
+flag = 0
 
-if [ "$respuesta" = "FINISH" ]; then
-	echo "" > ~/.vimrc
-	rm -rf ~/.vim/settings.vim
-	echo -e 'Erasing\n'
-	
-	for ((percent=0; percent<=1000; percent++)); do
-		sleep 0.01
-	
-	# Borra el prograso anterior y muestra el nuevo
-		echo -ne "\r$percent% "
-	
-	#Aggiunge una barra di progresso
-		for ((i=0; i<percent/10; i++)); do
-			echo -n '🟥'
+while ("$flag" = 1)
+do
+	read respuesta
+	if [ "$respuesta" = "FINISH" ]; then
+		echo "" > ~/.vimrc
+		rm -rf ~/.vim/settings.vim
+		echo -e 'Erasing\n'
+		
+		for ((percent=0; percent<=100; percent++)); do
+			sleep 0.01
+		
+		# Borra el prograso anterior y muestra el nuevo
+			echo -ne "\r$percent% "
+		
+		#Aggiunge una barra di progresso
+			for ((i=0; i<percent/100; i++)); do
+				echo -n '🟥'
+			done
 		done
-	done
-	echo -e "\n"
-	echo "vimrc correctly cleaned"
-else
-	echo "Word sentence is not correct. Please insert FINISH"
-fi
-
+		echo -e "\n"
+		echo "vimrc correctly cleaned"
+		flag = 1
+	else
+		echo "Word sentence is not correct. Please insert FINISH"
+		flag = 0
+	fi	
+done

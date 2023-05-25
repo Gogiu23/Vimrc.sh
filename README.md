@@ -4,7 +4,7 @@
 > ### Installing
 
 ```bash
-git clone git@github.com:Gogiu23/.vimrc-in-42.git
+git clone https://github.com/Gogiu23/.vimrc-in-42.git
 chmod +x create_vimrc.sh
 cd .vimrc-in-42
 ```
