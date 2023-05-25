@@ -128,5 +128,6 @@ do
 	else
 		echo "Word sentence is not correct. Please insert FINISH"
 		$flag = 0
+		read respuesta
 	fi	
 done
