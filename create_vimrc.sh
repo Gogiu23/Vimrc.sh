@@ -11,9 +11,10 @@ else
 	echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 fi
 ruta="~/.vim"
-if [ ! -d "$ruta" ]; then
+carpeta=$(dirname "$ruta")
+if [ ! -d "$carpeta" ]; then
 	echo ".vim doesn't exist. Creating"
-	mkdir -p "$ruta"
+	mkdir -p "$carpeta"
 fi
 
 # Crea el archivo settings.vim dentro de vim
