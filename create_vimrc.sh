@@ -10,6 +10,11 @@ else
 	#Crea el .vimrc
 	echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 fi
+ruta="~/.vim"
+if [ ! -d "$ruta" ]; then
+	echo ".vim doesn't exist. Creating"
+	mkdir -p "$ruta"
+fi
 
 # Crea el archivo settings.vim dentro de vim
 echo 'filetype plugin indent on
