@@ -48,7 +48,9 @@ set nobackup
 set encoding=utf8
 set noexpandtab shiftwidth=4 tabstop=4
 set include=
-let g:netrw_winsize=15]
+let g:netrw_winsize=15
+nnoremap ] :call TheNext()<CR>
+nnoremap [ :call ThePrev()<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-z> :wqa<CR>
 inoremap jk <esc>
