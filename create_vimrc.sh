@@ -92,7 +92,7 @@ for ((percent=0; percent<=100; percent++)); do
 	echo -ne "\r$percent% "
 
 #Aggiunge una barra di progresso
-	for ((i=0; i<percent/100; i++)); do
+	for ((i=0; i<percent/10; i++)); do
 		echo -n '🟩'
 	done
 done
@@ -118,15 +118,15 @@ do
 			echo -ne "\r$percent% "
 		
 		#Aggiunge una barra di progresso
-			for ((i=0; i<percent/100; i++)); do
+			for ((i=0; i<percent/10; i++)); do
 				echo -n '🟥'
 			done
 		done
 		echo -e "\n"
 		echo "vimrc correctly cleaned"
-		flag = 1
+		$flag = 1
 	else
 		echo "Word sentence is not correct. Please insert FINISH"
-		flag = 0
+		$flag = 0
 	fi	
 done
