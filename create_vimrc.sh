@@ -124,10 +124,10 @@ do
 		done
 		echo -e "\n"
 		echo "vimrc correctly cleaned"
-		$flag=1
+		flag=1
 	else
 		echo "Word sentence is not correct. Please insert FINISH"
-		$flag=0
+		flag=0
 		read respuesta
 	fi	
 done
