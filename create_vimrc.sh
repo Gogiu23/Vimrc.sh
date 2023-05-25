@@ -102,7 +102,7 @@ echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 echo "The .vimrc and the settings are correctly created. Well done!!"
 echo 'Waiting for the end of the evaluation. Write "FINISH" to close the program'
 read respuesta
-flag = 0
+flag=0
 
 while ("$flag" = 1)
 do
