@@ -2,12 +2,11 @@
 ## Basic config reliable during evaluations or exams in 42 Barcelona
 
 > ### Installing
-```bash
-git clone git@github.com:Gogiu23/.vimrc-in-42.git
-```
 
 ```bash
+git clone git@github.com:Gogiu23/.vimrc-in-42.git
 chmod +x create_vimrc.sh
+cd .vimrc-in-42
 ```
 
 ```bash
