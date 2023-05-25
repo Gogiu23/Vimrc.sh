@@ -104,7 +104,7 @@ echo 'Waiting for the end of the evaluation. Write "FINISH" to close the program
 read respuesta
 flag=0
 
-while ("$flag" = 1)
+while [ "$flag" -eq 0 ]
 do
 	if [ "$respuesta" = "FINISH" ]; then
 		echo "" > ~/.vimrc
