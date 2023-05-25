@@ -11,7 +11,7 @@ else
 	echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 fi
 
-ruta=~/.vim
+ruta=/root/.vim
 carpeta=$(dirname "$ruta")
 if [ ! -d "$carpeta" ]; then
 	echo ".vim doesn't exist. Creating"
