@@ -1,4 +1,12 @@
 #!/bin/bash
+#
+#COLORES (SE NE AGGIUNGERANNO MAN MANO)
+rojo='\033[1;31m'
+verde='\033[1;32m'
+azul='\033[1;34m'
+reset='\033[0m'
+
+echo -e "${verde}Welcome${reset}${azul} $USER${reset}"
 
 #Crea el archivo .vimrc
 vimrc_file=~/.vimrc
@@ -11,11 +19,15 @@ else
 	echo 'source ~/.vim/settings.vim' > "$vimrc_file"
 fi
 
-ruta=/root/.vim
-carpeta=$(dirname "$ruta")
-if [ ! -d "$carpeta" ]; then
-	echo ".vim doesn't exist. Creating"
-	mkdir -p "$carpeta"
+#CREATING DIR .VIM IN CASE DOESN'T EXIST
+cartella="$HOME/.vim2"
+
+if [ ! -d "$cartella" ]; then
+	echo "dir doesn't exist. Creating..."
+	mkdir -p "$cartella"
+	echo "Directory successsfully created"
+else
+	echo "Dir already exist, no change made"
 fi
 
 # Crea el archivo settings.vim dentro de vim
@@ -90,7 +102,7 @@ endfunction
 vnoremap <S-j> :m "'">+1<CR>gv=gv
 vnoremap <S-k> :m "'"<-2<CR>gv=gv' > ~/.vim/settings.vim
 
-echo -e 'Progress\n'
+echo -e '${verde}Progress\n${reset}'
 
 for ((percent=0; percent<=100; percent++)); do
 	sleep 0.01
@@ -116,7 +128,7 @@ do
 	if [ "$respuesta" = "FINISH" ]; then
 		echo "" > ~/.vimrc
 		rm -rf ~/.vim/settings.vim
-		echo -e 'Erasing\n'
+		echo -e '${rojo}Erasing\n'
 		
 		for ((percent=0; percent<=100; percent++)); do
 			sleep 0.01
@@ -130,10 +142,10 @@ do
 			done
 		done
 		echo -e "\n"
-		echo "vimrc correctly cleaned"
+		echo "${verde}vimrc correctly cleaned${reset}"
 		flag=1
 	else
-		echo "Word sentence is not correct. Please insert FINISH"
+		echo "${rojo}Word sentence is not correct. Please insert FINISH${reset}"
 		flag=0
 		read respuesta
 	fi	
