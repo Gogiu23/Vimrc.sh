@@ -20,7 +20,7 @@ else
 fi
 
 #CREATING DIR .VIM IN CASE DOESN'T EXIST
-cartella="$HOME/.vim2"
+cartella="$HOME/.vim"
 
 if [ ! -d "$cartella" ]; then
 	echo "dir doesn't exist. Creating..."
@@ -102,7 +102,7 @@ endfunction
 vnoremap <S-j> :m "'">+1<CR>gv=gv
 vnoremap <S-k> :m "'"<-2<CR>gv=gv' > ~/.vim/settings.vim
 
-echo -e '${verde}Progress\n${reset}'
+echo -e "${verde}Progress\n${reset}"
 
 for ((percent=0; percent<=100; percent++)); do
 	sleep 0.01
@@ -118,8 +118,8 @@ done
 echo -e "\n"
 
 echo 'source ~/.vim/settings.vim' > "$vimrc_file"
-echo "The .vimrc and the settings are correctly created. Well done!!"
-echo 'Waiting for the end of the evaluation. Write "FINISH" to close the program'
+echo -e "${azul}The .vimrc and the settings are correctly created. Well done!!${reset}"
+echo  -e "Waiting for the end of the evaluation. Write ${rojo}"FINISH"${reset} to close the program"
 read respuesta
 flag=0
 
@@ -128,7 +128,7 @@ do
 	if [ "$respuesta" = "FINISH" ]; then
 		echo "" > ~/.vimrc
 		rm -rf ~/.vim/settings.vim
-		echo -e '${rojo}Erasing\n'
+		echo -e "${rojo}Erasing\n"
 		
 		for ((percent=0; percent<=100; percent++)); do
 			sleep 0.01
@@ -142,10 +142,10 @@ do
 			done
 		done
 		echo -e "\n"
-		echo "${verde}vimrc correctly cleaned${reset}"
+		echo -e "${verde}vimrc correctly cleaned${reset}"
 		flag=1
 	else
-		echo "${rojo}Word sentence is not correct. Please insert FINISH${reset}"
+		echo -e "Word sentence is not correct. Please insert ${rojo}FINISH${reset}"
 		flag=0
 		read respuesta
 	fi	
