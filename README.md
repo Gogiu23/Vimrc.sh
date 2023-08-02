@@ -1,12 +1,11 @@
 # .VIMRC default
-## Basic config reliable during evaluations or exams in 42 Barcelona
 
 > ### Installing
 
 ```bash
-git clone https://github.com/Gogiu23/.vimrc-in-42.git
+git clone https://github.com/Gogiu23/Vimrc.sh
 chmod +x create_vimrc.sh
-cd .vimrc-in-42
+cd Vimrc.sh
 ```
 
 ```bash
