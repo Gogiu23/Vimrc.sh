@@ -7,13 +7,21 @@
 2. [Which plugin would you like to install](#Which-plugin-would-you-like-to-install)
 
     2.1 [Nerdtree](#Nerdtree)
+
     2.2 [ALE](#ALE)
+
     2.3 [Vim fugitive](#Vim-fugitive)
+
     2.4 [Vim airline](#Vim-airline)
+
     2.5 [Vim easycomplete](#Vim-easycomplete)
+
     2.6 [Vim lsp](#Vim-lsp)
+
     2.7 [Vim snippets](#Vim-snippets)
+
     2.8 [Vim FZF](#Vim-FZF)
+
     2.9 [Oceanic Next](#Oceanic-Next)
 
 ### Installing
@@ -27,15 +35,25 @@ cd Vimrc.sh
 ./create_vimrc.sh
 ```
 ### Which plugin would you like to install
+_________
 #### Nerdtree
+___
 #### ALE
+___
 #### Vim fugitive
+___
 #### Vim airline
+___
 #### Vim easycomplete
+___
 #### Vim lsp
+___
 #### Vim snippets
+___
 #### Vim FZF
+___
 #### Oceanic Next
+___
 
 
 > ### SIT and RELAX ☕️, configuration is done
