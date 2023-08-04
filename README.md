@@ -57,5 +57,3 @@ ___
 
 
 > ### SIT and RELAX ☕️, configuration is done
-Bye bye
-ciao ciaop vecio
